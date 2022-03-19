@@ -1,0 +1,56 @@
+h2{
+    color: gold;
+    background-color: darkblue;
+    text-align: center;
+}
+
+h1{
+    color: gold;
+    background-color: darkblue;
+    text-align: center;
+}
+.Counter{
+    text-align: center;
+    color: gold;
+    background-color: darkblue;
+}
+
+.STRT{
+    display: block;
+    width: 100%;
+    color: rgb(255, 0, 0);
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 12px;
+}
+.Clicker{
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 236, 175);
+    background-color: rgb(124, 7, 7);
+    padding: 30px;
+    border-radius: 12px;
+}
+.T1{
+    background-color: red;
+    text-align: center;
+    /* padding: 5px 200px; */
+}
+.T2{
+    background-color: yellow;
+    text-align: center;
+}
+.T5{
+    background-color: green;
+    color: rgb(223, 223, 223);
+    text-align: center;
+}
+.T10{
+    background-color: blue;
+    color: rgb(223, 223, 223);
+    text-align: center;
+}
+.Record{
+    background-color: gold;
+    color: blue;
+}

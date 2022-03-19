@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+
+<html>
+<body>
+    <link rel="stylesheet" href="styles.css">
+<h2>Clicks Per Second Tester</h2>
+<h1>Clicks Per Second: </h1>
+<h1 id="ClickThing">0</h1>
+<h1>Clicks: </h1>
+<p id="p1" class="Counter">Hello World!</p>
+
+<script>let width = screen.width;</script>
+<!-- <p>The paragraph above was changed by a script.</p> -->
+<button id="T1" class="T1" onclick="T1()">1 Second</button>
+<button id="T2" class="T2" onclick="T2()">2 Seconds</button>
+<button id="T5" class="T5" onclick="T5()">5 Second</button>
+<button id="T10" class="T10" onclick="T10()">10 Seconds</button>
+<button id="start" class="STRT" onclick="Reset()">Reset</button>
+<h1></h1>
+<button id="btn" class="Clicker" onclick="Test()">Click Me!</button>
+<h1></h1>
+<h1 class="Record">Record: </h1>
+<h1 id="Record" class="Record">0</h1>
+
+<script>
+    
+    console.log(width)
+    var Clicks = 0;
+    var RunAble = 0;
+    var Time = 10000;
+    var Best = 0;
+
+    function T1(){
+        Time = 1000;
+    }
+    function T2(){
+        Time = 2000;
+    }
+    function T5(){
+        Time = 5000;
+    }
+    function T10(){
+        Time = 10000;
+    }
+
+
+
+
+
+    function Test(params) {
+        if(Clicks == 0){
+            Clicks = Clicks + 1;
+            Start()
+        }
+        if(RunAble == 1){
+            console.log("AYYYYYOOOOOOOOOOOOOOOOOOOOOOOOOoo");
+        Clicks++;
+        document.getElementById("p1").innerHTML = Clicks;
+        } 
+    }
+
+    function Start(params){
+        if(RunAble ==0){
+            Clicks = 0;
+            console.log("A");
+            RunAble = 1;
+            console.log("B");
+            setTimeout(() =>{
+                RunAble = 0;
+                var CPS = Clicks / Time * 1000;
+                document.getElementById("ClickThing").innerHTML = CPS;
+                if(CPS > Best){
+                    Best = CPS;
+                    document.getElementById("Record").innerHTML = Best;
+                    console.log("Changed")
+                }else{
+                    console.log("FAIL")
+                }
+                console.log("DOne");
+            }, Time)
+        }
+    }
+    function Reset(){
+        Clicks = 0;
+        document.getElementById("p1").innerHTML = Clicks;
+    }
+    </script>
+
+</body>
+
+</html>
+<!-- "dbh": (60*(Math.random())) -->
